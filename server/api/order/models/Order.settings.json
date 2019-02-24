@@ -1,0 +1,40 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "address": {
+      "default": "",
+      "type": "string"
+    },
+    "postalCode": {
+      "default": "",
+      "type": "string"
+    },
+    "city": {
+      "default": "",
+      "type": "string"
+    },
+    "dishes": {
+      "default": "",
+      "type": "json"
+    },
+    "amount": {
+      "default": "",
+      "type": "decimal"
+    },
+    "user": {
+      "model": "user",
+      "via": "orders",
+      "plugin": "users-permissions"
+    }
+  }
+}
